@@ -1,0 +1,437 @@
+.header {
+  background-color: #1a6ace;
+  height: 80px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.dateheader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 70px;
+  margin-top: 40px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer {
+  background-color: #1a6ace;
+  height: 90px;
+  color: #fff;
+  text-align: center;
+  width: 98%;
+  position: absolute;
+}
+
+body {
+  background-color: #121212;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
+}
+
+.monthcalendar {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.yearscalendar {
+  /*décaler vers la droite*/
+  margin-left: 50px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.buttonyears {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  margin-top: 35px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 200px;
+  margin-top: 35px;
+}
+
+.buttonplanning{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 50px;
+  margin-top: 35px;
+}
+
+/* Style du bouton quand la souris est dessus */
+.button:hover {
+  background-color: #4285f4;
+}
+
+/* Style du bouton quand il est pressé */
+.button:active {
+  background-color: #0d47a1;
+}
+
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button + .button {
+  margin-left: 10px;
+}
+
+.monthcalendar {
+  margin: 10px;
+  position: absolute;
+  width: 168px;
+  left: 30px;
+  top: 110px;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.divTable {
+  color: #fff;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+  height: 70vh;
+  margin-top: 20px;
+  text-align: center;
+  /*espace apres le dernier element*/
+  margin-bottom: 20px;
+}
+
+.divTableRow, .divTableRowspecial {
+	display: table-row;
+}
+
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 16px 10px;
+  font-size: 20px;
+}
+
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.divTableCell:hover {
+  background-color: #1a73e8;
+  cursor: pointer;
+}
+
+.divTableCellday, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+  font-size: 18px;
+  height: 25px;
+}
+
+.today {
+  background-color: #1a73e8;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.divTableCell:hover .today {
+  background-color: black;
+}
+
+.lastmonth {
+  opacity: 0.3;
+}
+
+.nextmonth {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 508px) {
+  .divTable {
+    overflow-x: auto;
+  }
+}
+
+.modal {
+  position: absolute;
+  z-index: 40000;
+}
+
+.nbevent {
+  color: #ff0000;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.selecteddate{
+  position: absolute;
+  top: 0;
+  left: 320px;
+  margin: 70px;
+  margin-top: 135px;
+  font-size: 30px;
+}
+
+.inputdate{
+  position: absolute;
+  top: 120px;
+  left: -30px;
+  margin: 70px;
+}
+
+/*Style pour les events*/
+
+.planning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.selecteddate {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.eventtitle {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+.eventdescription {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.eventadress {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  /*souligner le lien*/
+  text-decoration: underline;
+}
+
+.eventadress:hover {
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.event {
+  background-color: #1a6dca;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.inputdate {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.startevent {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.endevent {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/*modale*/
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #121212;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}
+
+.closebuttonmodal{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 200px;
+  margin-top: 35px;
+}
+
+ul{
+  color: #fff;
+}
+
+.imagemodal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.nbevent{
+  margin-top: 3vh;
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #ff0000;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  line-height: 28px;
+}
+
+.divTableCelltoday{
+  border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+  font-size: 20px;
+}
+
+.divTableCelltoday:hover{
+  background-color: #1a73e8;
+  cursor: pointer;
+}
+
+.todayevent{
+  background-color: #1a73e8;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.closebuttonmodal2{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: -15px;
+  right: 8px;
+}
+
+.checkboxtitlefree{
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 16px;
+  color: #fff;
+}
